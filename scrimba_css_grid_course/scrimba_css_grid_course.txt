@@ -7,7 +7,7 @@
 
 fr - fraction unit, takes up a part of 100%
 
--------
+----------------------------------
 
 .container {
     display: grid;
@@ -17,8 +17,9 @@ fr - fraction unit, takes up a part of 100%
 
 compact way to write down grid params, L - down for rows, right for columns
 
----------
+------------------------------------
 GRID COLUMN POSITIONS
+------------------------------------
 
 grid-column-start:
 grid-column-end:
@@ -29,8 +30,9 @@ grid-column: 1 / -1;
         -1 means - last column
 
 
----------
+---------------------------
 TEMPLATE AREAS
+---------------------------
 
 .container {
     height: 100%;
@@ -61,3 +63,34 @@ TEMPLATE AREAS
 .footer {
     grid-area: f;
 }
+
+---------------------------------------
+Auto-fit and minmax
+---------------------------------------
+
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+}
+
+minmax - gives minumum and maximum width params to the elements of the grid, so stretching is more smooth with no empty space
+auto-fit - similar to flex wrap, moves elements to the next/previous line instead of stretching/squeezing them
+
+---------------------------------------
+Implicit rows
+---------------------------------------
+
+grid-auto-rows: 100px;
+
+gives all the rows same size so that the rows that are created beyond set amount of 'grid-template-rows:'
+will have proper height
+
+---------------------------------------
+AUTO FLOW
+---------------------------------------
+
+grid-auto-flow: dense < uses dense algorythm to fill in the empty spots if item grid sizing is uneven
+
+this is an example of source order independence
