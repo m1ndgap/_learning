@@ -94,3 +94,51 @@ AUTO FLOW
 grid-auto-flow: dense < uses dense algorythm to fill in the empty spots if item grid sizing is uneven
 
 this is an example of source order independence
+
+-----------------------------------------------
+Bonus: justify-content and align-content
+-----------------------------------------------
+
+justify-content: center;
+align-content: end;
+
+start / end / center - similar to flex positioning
+space-between / space-evenly / space-around
+
+
+-----------------------------------------------
+Bonus: justify-items and align-items
+-----------------------------------------------
+
+justify-items: center / start / end
+align-items: center / start / end
+
+similar to flexbox
+
+justify-self: center / start / end
+align-self: center / start / end
+
+
+---------------------------------------
+Bonus: Auto-fit vs. auto-fill
+---------------------------------------
+
+.container {
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 100px 100px;
+}
+
+.container2 {
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: 100px 100px;
+}
+
+In case you dont have more elements to move to the existing line when stretching the element:
+auto-fill maximizes size of the existing elements and starts adding empty space
+auto-fit keeps stretching existing elements as far as it can
