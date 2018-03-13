@@ -1,0 +1,63 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 50px 50px;
+    grid-gap: 3px;
+}
+
+fr - fraction unit, takes up a part of 100%
+
+-------
+
+.container {
+    display: grid;
+    grid-template: repeat(2, 50px) / repeat(3, 1fr);
+    grid-gap: 3px;
+}
+
+compact way to write down grid params, L - down for rows, right for columns
+
+---------
+GRID COLUMN POSITIONS
+
+grid-column-start:
+grid-column-end:
+        gives a column directions how long should it span
+
+grid-column: 1 / -1;
+        compact version 'start / end'
+        -1 means - last column
+
+
+---------
+TEMPLATE AREAS
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px auto 40px;
+    grid-template-areas:
+        // strings represemt our layout
+        ". h h h h h h h h h h ."
+        "m c c c c c c c c c c c"
+        ". f f f f f f f f f f .";
+}
+
+// we assign letters to blocks and they take that position. all areas must be rectangles or the whole layout breaks
+.header {
+    grid-area: h;
+}
+
+.menu {
+    grid-area: m;
+}
+
+.content {
+    grid-area: c;
+}
+
+.footer {
+    grid-area: f;
+}
