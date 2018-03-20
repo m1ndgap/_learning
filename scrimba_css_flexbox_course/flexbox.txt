@@ -1,0 +1,74 @@
+------------------------------
+flex
+------------------------------
+
+.container {
+  border: 5px solid #ffcc5c;
+  display: flex;
+}
+
+.container > div {
+  flex: 1;
+
+  /*flex-grow, flex-shrink, flex-basis */
+}
+
+.container > .search {
+  flex: 2;
+}
+
+
+FLEX gives you means to adjust proportions of the elements in the flexbox
+
+---------------------
+better approach: make one item flex and rest have a fixed width:
+
+    .container {
+      border: 5px solid #ffcc5c;
+      display: flex;
+    }
+
+    .search {
+      flex: 2;
+    }
+
+
+------------------------------
+ALIGN ITEMS
+------------------------------
+
+align items aligns items on vertical (cross) axis
+
+align-items: center; // flex-start, flex-end, stretch, center. stretch is default
+
+this can be done for the entire container or to an individual items with
+'align-self:'
+
+
+------------------------------
+FLEX WRAPPING
+------------------------------
+
+flex-wrap: nowrap(default), wrap, wrap reverse
+
+
+------------------------------
+Flex grow, shrink, basis
+------------------------------
+
+flex: 1 1 200px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 200px;
+
+flex property is short for  flex-grow:;   flex-shrink:;  flex-basis:;
+
+you can use 'flex: 1 1 1;' formula to set all 3 of them
+
+flex-basis: sets basic width of the element, it wont take more than flex basis in size
+
+flex-grow: decides how much of the extra space the element takes if it is available
+if different items have different coefficients ones with larger flex-grow grows faster
+
+flex-shrink: reverse effect of flex grow: when elements are shrunk less than original size
+f-s enables them to shrink properly, elements with higher f-s will shrink faster
