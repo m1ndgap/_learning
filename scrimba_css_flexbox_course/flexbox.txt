@@ -72,3 +72,16 @@ if different items have different coefficients ones with larger flex-grow grows 
 
 flex-shrink: reverse effect of flex grow: when elements are shrunk less than original size
 f-s enables them to shrink properly, elements with higher f-s will shrink faster
+
+
+------------------------------
+FLEX ORDER
+------------------------------
+
+Flex is source order independent
+
+.item2 {
+  order: 1;
+}
+
+'order:' sets order of the items in the flow of the flexbox
