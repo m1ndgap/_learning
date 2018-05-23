@@ -11,5 +11,5 @@ $('.class, #id')
 // finding stuff with traversing
 $('.class').find(li)
 $('li').first().next()
-$('li').first().parent
+$('li').first().parent()
 $('#id').children(li)
