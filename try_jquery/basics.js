@@ -46,3 +46,11 @@ $('button').on('click', function(){
 $(this).remove()
 
 $(this).closest('.class').append(var) // closest looks for closest element with the given params up the DOM, very useful
+
+$('.class').on('click', 'button', function() {}); // better way to setup listening on certain elements
+
+// FILTERING AND EDITING CLASSES
+$('.class').filter('.class')
+
+$('.class').addClass('.class2')
+$('.class').removeClass('.class2')
