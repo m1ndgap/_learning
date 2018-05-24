@@ -49,8 +49,25 @@ $(this).closest('.class').append(var) // closest looks for closest element with 
 
 $('.class').on('click', 'button', function() {}); // better way to setup listening on certain elements
 
+
 // FILTERING AND EDITING CLASSES
 $('.class').filter('.class')
 
 $('.class').addClass('.class2')
 $('.class').removeClass('.class2')
+
+
+// LISTENING TO DOM EVENTS
+
+.slideDown()
+.slideUp()
+.slideToggle()
+
+// more events to listen to
+click dblclick focusin focusout mousedown mouseup mousemove mouseout mouseover mouseleave mouseenter
+
+// keyboard events
+keypress keydown keyup
+
+// form events
+blur select change focus submit
