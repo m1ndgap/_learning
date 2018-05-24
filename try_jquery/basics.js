@@ -37,3 +37,12 @@ $('.class').remove() // removes element
 
 
 // ACTING AND INTERACTION
+.on(<event>,<event handler>)
+
+$('button').on('click', function(){
+});
+
+// using this
+$(this).remove()
+
+$(this).closest('.class').append(var) // closest looks for closest element with the given params up the DOM, very useful
