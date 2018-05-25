@@ -55,7 +55,7 @@ $('.class').filter('.class')
 
 $('.class').addClass('.class2')
 $('.class').removeClass('.class2')
-
+.toggleClass('class')
 
 // LISTENING TO DOM EVENTS
 
@@ -71,3 +71,19 @@ keypress keydown keyup
 
 // form events
 blur select change focus submit
+
+
+// WORKING WITH STYLES
+
+.css(<attr>, <value>)
+.css(<attr>)
+.css(<object>)  // best way but its better to avoid direct css editing altogether, css belongs in css files, use add/remove class instead
+
+.show()
+.hide()
+
+.toggleClass('class')
+
+// logic
+
+.hasClass('class')
