@@ -86,4 +86,4 @@ blur select change focus submit
 
 // logic
 
-.hasClass('class')
+.hasClass('class') // used with IF statements
