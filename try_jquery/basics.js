@@ -87,3 +87,40 @@ blur select change focus submit
 // logic
 
 .hasClass('class') // used with IF statements
+
+
+
+// AJAX BASICS
+
+$(document).ready(function() {
+  $("#tour").on("click", "button", function() {
+    $.ajax('/photos.html', {
+      success: function(response) {
+        $('.photos').html(response).fadeIn();
+      }
+    });
+  });
+});
+
+// GET version less params and no need to pass request (????) http://jquery-part2.codeschool.com/levels/1/challenges/5
+$(document).ready(function() {
+  $("#tour").on("click", "button", function() {
+    $.get('/photos.html', function(response) {
+      $('.photos').html(response).fadeIn();
+    });
+  });
+});
+
+
+// properly using 'data' part to specify the request
+$(document).ready(function() {
+  var el = $("#tour")
+  el.on("click", "button", function() {
+    $.ajax('/photos.html', {
+      data: {location: el.data('location')},
+      success: function(response) {
+        $('.photos').html(response).fadeIn();
+      }
+    });
+  });
+});
