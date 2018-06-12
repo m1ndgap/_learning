@@ -124,3 +124,16 @@ $(document).ready(function() {
     });
   });
 });
+
+// working version from destiny guns
+$.ajax({
+ url: "sleeper-nodes.jsonp",
+ type: 'POST',
+ crossDomain: true,
+ dataType: 'jsonp',
+ accepts: 'application/jsonp',
+ jsonpCallback: 'callback',
+   success: function (data) {
+       console.log(data);
+   }
+ });
