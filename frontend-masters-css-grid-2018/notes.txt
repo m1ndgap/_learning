@@ -1,0 +1,6 @@
+[href*='http:'] {}
+[href*='.pdf'] {}
+
+This allows you to tag all specific links with cool icons and stuff, very cool concept
+
+flexbox > float
