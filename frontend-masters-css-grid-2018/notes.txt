@@ -4,3 +4,15 @@
 This allows you to tag all specific links with cool icons and stuff, very cool concept
 
 flexbox > float
+
+
+***** RESPONSIVE IMAGES *****
+  Approaches:
+  — Load a big image and let it scale (NOT GOOD)
+  — Server-side (GOOD)
+  — Client-side: load several images and display the one for the current resolution (NOT GOOD)
+    — Better sub-option is to let JS script load the right image (BETTER)
+  — Picture tag (GOOD)
+
+  PICTUREFILL (Responsive image polyfill):
+  
