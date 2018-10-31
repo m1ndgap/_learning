@@ -15,4 +15,34 @@ flexbox > float
   — Picture tag (GOOD)
 
   PICTUREFILL (Responsive image polyfill):
-  
+  Picturefill source
+    http://scottjehl.github.io/picturefill/
+
+    About the <picture> tag
+    https://www.html5rocks.com/en/tutorials/responsive/picture-element/
+
+    Tim Kadlec: Media query asset downloading results
+    http://timkadlec.com/2012/04/media-query-asset-downloading-results/
+
+
+***** CSS GRID *****
+
+  Polyfills:
+    New spec: https://github.com/FremyCompany/css-grid-polyfill
+    Old spec: https://github.com/codler/Grid-Layout-Polyfill
+
+  Sources:
+    Named grid template areas (header footer etc):
+      https://gridbyexample.com/examples/#example11
+
+  Grid fallbacks:
+  https://rachelandrew.co.uk/css/cheatsheets/grid-fallbacks
+
+
+
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
